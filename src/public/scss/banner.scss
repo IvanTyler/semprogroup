@@ -1,0 +1,24 @@
+.banner {
+
+    &__picture {
+        display: block;
+        height: clamp(313px, 35vw, 600px);
+
+        @media (max-width: 780px) {
+            height: 487px;
+        }
+
+        @media (max-width: 360px) {
+            height: 313px;
+        }
+
+    }
+
+    &__img {
+        display: inline-block;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+}

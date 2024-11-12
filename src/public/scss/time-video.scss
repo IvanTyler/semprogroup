@@ -1,0 +1,16 @@
+.time-video {
+    transform: translateY(15px);
+    align-self: start;
+    grid-area: time;
+    font-family: var(--color-main_2);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--color-main_2);
+    opacity: 0.5;
+
+    @media (max-width: 1070px) {
+        font-size: 13px;
+        transform: translateY(11px);
+    }
+}

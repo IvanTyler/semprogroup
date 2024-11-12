@@ -1,0 +1,29 @@
+.menu {
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__text {
+        font-family: var(--font-main);
+        font-weight: 600;
+        font-size: clamp(12px, 1vw, 15px);
+        line-height: 18px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #111;
+        cursor: pointer;
+    }
+
+    &__text {
+        order: 1;
+
+        &:hover+.burger .burger__item:first-child {
+            transform: translateY(-70%);
+        }
+
+        &:hover+.burger .burger__item:last-child {
+            transform: translateY(70%);
+        }
+    }
+}

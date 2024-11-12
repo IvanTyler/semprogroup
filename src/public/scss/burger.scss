@@ -1,0 +1,20 @@
+.burger {
+    display: grid;
+    gap: 6px;
+    width: 37px;
+
+    &__item {
+        position: relative;
+        height: 2px;
+        background-color: var(--color-main_1);
+        transition: var(--transition);
+
+        &:first-child {
+            top: 0;
+        }
+
+        &:last-child {
+            bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/public/css/main.css">
+    <script defer src="/src/public/javaScript/main.js"></script>
+    <title>inchapin</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container container-header">
+                <div class="menu">
+                    <h3 class="menu__text">меню</h3>
+                    <div class="burger">
+                        <div class="burger__item"></div>
+                        <div class="burger__item"></div>
+                        <div class="burger__item"></div>
+                    </div>
+                </div>
+
+                <button class="header__button">
+                    <div class="header__wrapper-choose-apartment">
+                        <div class="header__choose-apartment">
+                            <span>выбрать квартиру</span>
+                            <span>выбрать квартиру</span>
+                        </div>
+                    </div>
+                </button>
+
+                <a href="" class="header__link-logo">
+                    <img src="./src/public/icon/logo.svg" alt="inchapin" class="header__logo">
+                </a>
+
+                <a href="tel:+74955272121" class="header__link tel">
+                    <span class="header__phone">
+                        +7 495 527 21 21
+                    </span>
+                    <img src="./src/public/icon/phone.svg" alt="phone" class="header__phone-icon">
+                </a>
+
+                <div class="header__order-call">
+                    <div class="header__wrapper-order-call">
+                        <div class="header__order-call-content">
+                            <span>заказать звонок</span>
+                            <span>заказать звонок</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="banner">
+                <div class="container container-banner">
+                    <picture class="banner__picture">
+                        <source media="(max-width:768px)" srcset="/src/public/img/banner-mobile-2.png">
+                        <source media="(max-width:1024px)" srcset="/src/public/img/banner-mobile.png">
+                        <img class="banner__img" src="/src/public/img/banner.png" alt="home">
+                    </picture>
+                </div>
+            </section>
+
+            <section class="inchapin">
+                <div class="container container-inchapin">
+                    <div class="inchapin__text">
+                        дом бизнес-класса <br /> для ценителей роскоши
+                    </div>
+
+                    <img class="inchapin__img" src="./src/public/icon/inchapin.svg" alt="inchapin">
+                </div>
+            </section>
+
+            <section class="about-project">
+                <div class="container container-about-project">
+                    <div class="about-project__left">
+                        <span class="about-project__text">о проекте</span>
+                        <div class="about-project__wrapper-img">
+                            <img src="./src/public/img/home-2.png" alt="home" class="about-project__img">
+                            <div class="about-project__circle">
+                                <img src="./src/public/icon/sign.svg" alt="inchapin" class="about-project__icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-project__right">
+                        <div class="about-project__line"></div>
+                        <h1 class="about-project__title">
+                            уютное и безопасное пространство для счастливой,
+                            <span>
+                                спокойной и размеренной жизни
+                            </span>
+                        </h1>
+
+                        <div class="about-project__description">
+                            <span>
+                                квартиры от 65 до м<sup>2</sup> с чистовой отделкой
+                            </span>
+                            балконами, лоджиями и террасами в собственной
+                            закрытой охраняемой территории.
+                        </div>
+
+                        <div class="video-about-project">
+                            <div class="video-about-project__wrapper">
+                                <span class="video-about-project__text">видео о проекте</span>
+                                <div class="video-about-project__line"></div>
+                                <div class="time-video">
+                                    <span class="time-video__hours">1</span>:<span class="time-video__minutes">25</span>
+                                    минут
+                                </div>
+                            </div>
+
+                            <div class="video-circle">
+                                <div class="video-circle__circle">
+                                    <span class="video-circle__text">play</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal">
+        <div class="container container-modal">
+            <img class="modal__close" src="/src/public/icon/close.svg" alt="close">
+
+            <form action="" class="form-order-call">
+
+                <h2 class="form-order-call__title">
+                    заказать звонок
+                </h2>
+
+                <div class="form-order-call__wrapper-input name">
+                    <input id="name" maxlength="30" name="name" type="text" class="form_input form-order-call__input">
+                    <label for="name" class="form-order-call__text">ваше имя</label>
+                </div>
+                <div class="form-order-call__wrapper-input phone">
+                    <input id="phone" name="phone" type="text" class="form_input tel form-order-call__input">
+                    <label for="phone" class="form-order-call__text">телефон</label>
+                </div>
+                <div class="form-order-call__wrapper-input email">
+                    <input id="email" name="email" minlength="10" maxlength="40" type="email"
+                        class="form_input form-order-call__input">
+                    <label for="email" class="form-order-call__text">e-mail</label>
+                </div>
+
+                <div class="form-order-call__privacy-policy">
+                    Нажимая кнопку «отправить», вы ознакомлены
+                    и соглашаетесь с политикой обработки персональных данных
+                </div>
+
+                <button class="form-order-call__button">
+                    отправить
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal video">
+        <img class="modal__close video" src="/src/public/icon/close.svg" alt="close">
+        <div class="container container-modal video">
+            <video controls class="inchapin-video">
+                <source src="/src/public/video/gallery.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+</body>
+
+</html>

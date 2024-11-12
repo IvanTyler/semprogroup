@@ -1,0 +1,53 @@
+.video-circle {
+    grid-area: video;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(131px, 14vw, 241px);
+    height: clamp(131px, 14vw, 241px);
+    border-radius: 100%;
+    background: linear-gradient(rgba(47, 128, 237, 0.3), rgba(47, 128, 237, 0.3)), url("../img/home-3.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: var(--transition);
+
+    &:hover {
+        background-size: 125%;
+    }
+
+
+    &__circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: circle;
+        border-radius: 100%;
+        border: solid 1px #fff;
+        width: clamp(77px, 8vw, 141px);
+        height: clamp(77px, 8vw, 141px);
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(10px, 1vw, 18px);
+        line-height: 160%;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: clamp(7px, 1vw, 13px);
+            height: clamp(8px, 1.1vw, 14px);
+            background-image: url('../icon/play.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

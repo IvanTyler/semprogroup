@@ -1,0 +1,100 @@
+.form-order-call {
+    position: relative;
+    display: grid;
+    width: 100%;
+    max-width: 587px;
+    margin: 0 auto;
+
+    &__title {
+        justify-self: center;
+        font-family: var(--font-main);
+        font-weight: 400;
+        font-size: clamp(52px, 10vw, 20px);
+        margin-bottom: clamp(80px, 10vw, 30px);
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    &__wrapper-input {
+        position: relative;
+        height: 35px;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+        &:not(:first-of-type) {
+            margin-top: clamp(49px, 1vw, 41px);
+        }
+    }
+
+    &__wrapper-input.error {
+        border-bottom: 1px solid red;
+    }
+
+    &__input {
+        font-size: clamp(17px, 3vw, 11px);
+        line-height: clamp(20px, 3vw, 14px);
+        color: #000;
+        height: 100%;
+        width: 100%;
+        font-family: var(--font-main_2);
+    }
+
+    &__input:focus+.form-order-call__text,
+    &__input.focus+.form-order-call__text {
+        top: calc(50% - 30px);
+        font-size: 11px;
+    }
+
+    &__text {
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 0;
+        font-family: var(--font-main);
+        font-size: clamp(17px, 3vw, 11px);
+        line-height: clamp(20px, 3vw, 14px);
+        font-weight: 400;
+        color: #000;
+        text-transform: uppercase;
+        transition: var(--transition);
+    }
+
+    &__privacy-policy {
+        justify-self: center;
+        max-width: 400px;
+        margin-top: clamp(50px, 2vw, 40px);
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: #000;
+        opacity: 0.5;
+
+        @media (max-width: 370px) {
+            font-size: 12px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        text-align: center;
+        margin-top: clamp(30px, 2vw, 20px);
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: clamp(15px, 2vw, 11px);
+        line-height: 100%;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px solid var(--color-main_1);
+        background-color: var(--color-main_1);
+        border-radius: 100px;
+        padding: 24px 15px;
+        width: 234px;
+        height: 63px;
+        cursor: pointer;
+    }
+}

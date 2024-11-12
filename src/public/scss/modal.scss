@@ -1,0 +1,61 @@
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+
+    .container-modal {
+        height: 100%;
+        display: grid;
+        align-items: center;
+        background-color: #fff;
+    }
+
+    .container-modal.video {
+        justify-content: center;
+    }
+
+    &__close {
+        position: absolute;
+        right: 60px;
+        top: 60px;
+        cursor: pointer;
+        transition: transform var(--transition);
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.modal.open {
+    animation: openModal 0.5s;
+}
+
+.modal.close {
+    animation: closeModal 0.5s;
+}

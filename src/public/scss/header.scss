@@ -1,0 +1,190 @@
+.header {
+    position: sticky;
+    top: 0;
+    padding: 40px 0;
+    z-index: 2;
+    width: 100%;
+    background-color: #fff;
+    transition: box-shadow var(--transition);
+
+    .container-header {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-columns: 94px minmax(240px, auto) 1fr minmax(187px, auto) minmax(155px, auto);
+        grid-template-areas:
+            'menu button logo tel order-call'
+        ;
+        gap: 45px;
+        height: 100%;
+
+        @media (max-width: 1300px) {
+            grid-template-columns: 94px minmax(192px, auto) 1fr minmax(155px, auto) minmax(155px, auto);
+        }
+
+        @media (max-width: 1010px) {
+            grid-template-columns: 94px 42px 155px minmax(192px, 240px);
+            grid-template-areas:
+                'menu tel logo button'
+            ;
+            gap: 35px;
+        }
+
+        @media (max-width: 690px) {
+            grid-template-columns: 94px 130px 42px;
+            grid-template-areas:
+                'menu logo tel'
+            ;
+            gap: 20px;
+        }
+
+    }
+
+    &__button {
+        grid-area: button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 0 26px;
+        text-align: center;
+        height: clamp(41px, 5vw, 53px);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(11px, 1vw, 15px);
+        line-height: 18px;
+        letter-spacing: 0.07em;
+        color: #fff;
+        border: 1px solid var(--color-main_1);
+        background-color: var(--color-main_1);
+        border-radius: 119px;
+        transition: var(--transition);
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 15px;
+            background-image: url('../icon/arrow-down.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media (max-width: 1010px) {
+            padding: 0 10px;
+        }
+
+        @media (max-width: 690px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        &:hover {
+            background-color: darken(#2F80ED, 7%);
+
+            .header__choose-apartment {
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__wrapper-choose-apartment,
+    &__wrapper-order-call {
+        overflow: hidden;
+        position: relative;
+        height: 18px;
+    }
+
+    &__wrapper-order-call {
+        height: 15px;
+    }
+
+    &__choose-apartment,
+    &__order-call-content {
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+    }
+
+    &__link-logo {
+        display: inline-block;
+        grid-area: logo;
+        justify-self: center;
+
+        @media (max-width: 1010px) {
+            width: 155px;
+            justify-self: start;
+        }
+
+        @media (max-width: 690px) {
+            width: 130px;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__link.tel {
+        grid-area: tel;
+        font-family: var(--font-main);
+        font-weight: 600;
+        font-size: clamp(12px, 1vw, 17px);
+        line-height: 100%;
+        color: var(--color-main_2);
+
+        @media (max-width: 1010px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+            border-radius: 100%;
+            width: 42px;
+            height: 42px;
+            border: solid 1px #d7d7d7;
+        }
+    }
+
+    &__order-call {
+        grid-area: order-call;
+        font-family: var(--font-main);
+        font-weight: 600;
+        font-size: clamp(12px, 1vw, 15px);
+        line-height: clamp(15px, 1vw, 18px);
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--color-main_1);
+        cursor: pointer;
+        transition: var(--transition);
+
+        &:hover {
+            .header__order-call-content {
+                transform: translateY(-50%);
+            }
+        }
+
+        @media (max-width: 1010px) {
+            display: none;
+        }
+    }
+
+    &__phone {
+        @media (max-width: 1010px) {
+            display: none;
+        }
+    }
+
+    &__phone-icon {
+        display: none;
+
+        @media (max-width: 1010px) {
+            display: inline-block;
+        }
+    }
+}
+
+.header.scroll {
+    box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
+}

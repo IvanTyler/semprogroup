@@ -1,0 +1,45 @@
+.inchapin {
+    margin-top: clamp(20px, 5vw, 50px);
+
+    &__text {
+        align-self: end;
+        font-family: var(--font-main);
+        font-weight: 400;
+        font-size: 31px;
+        line-height: 34px;
+        text-transform: uppercase;
+        color: #2f80ed;
+
+        @media (max-width: 1440px) {
+            font-size: 26px;
+            line-height: 29px;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 19px;
+            line-height: 22px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: clamp(13px, 3vw, 26px);
+        }
+    }
+
+    &__img {
+        justify-self: end;
+        max-width: 100%;
+        width: 862px;
+    }
+}
+
+.container-inchapin {
+    display: grid;
+    grid-template-columns: minmax(416px, auto) 1fr;
+    gap: 30px;
+
+    @media (max-width: 780px) {
+        grid-template-columns: 1fr;
+        gap: clamp(20px, 7vw, 43px);
+    }
+
+}

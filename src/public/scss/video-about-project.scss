@@ -1,0 +1,61 @@
+.video-about-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    align-items: center;
+    grid-template-areas:
+        'wrapper video'
+    ;
+    margin-top: clamp(20px, 5vw, 100px);
+
+    @media (max-width: 400px) {
+        gap: 0 10px;
+    }
+
+    &__wrapper {
+        grid-area: wrapper;
+        display: grid;
+        grid-template-areas:
+            'text line'
+            'time line'
+        ;
+        grid-template-columns: 1fr minmax(59px, 150px);
+        gap: 0 20px;
+        align-items: center;
+        font-family: var(--font-main);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: var(--color-main_2);
+        white-space: nowrap;
+
+        @media (max-width: 400px) {
+            gap: 0 10px;
+        }
+    }
+
+    &__line {
+        grid-area: line;
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        background-color: #d7d7d7;
+    }
+
+    &__text {
+        transform: translateY(15px);
+        grid-area: text;
+        font-family: var(--font-main);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: var(--color-main_2);
+
+        @media (max-width: 1070px) {
+            transform: translateY(11px);
+            font-size: 10px;
+        }
+    }
+}
