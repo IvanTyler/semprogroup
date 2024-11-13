@@ -206,6 +206,6 @@ function closeEscForm() {
     }
 }
 
-const mainNode = document.querySelector('.body');
+const mainNode = document.querySelector('.main');
 
 Scrollbar.init(mainNode);
