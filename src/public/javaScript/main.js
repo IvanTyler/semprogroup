@@ -58,7 +58,6 @@ $form?.addEventListener('submit', (event) => {
         $form_email_wrapper.classList.remove('error')
 
         $form.reset();
-
         console.log(formData);
     }
 })
