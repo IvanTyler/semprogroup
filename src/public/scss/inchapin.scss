@@ -1,6 +1,26 @@
 .inchapin {
     margin-top: clamp(20px, 5vw, 50px);
 
+    &__title {
+        font-family: var(--font-main);
+        text-transform: uppercase;
+        font-weight: 400;
+        justify-self: end;
+        letter-spacing: 0.03em;
+        font-size: clamp(40px, 10vw, 187px);
+        line-height: clamp(20px, 10vw, 137px);
+
+        @media (max-width: 780px) {
+            font-size: clamp(40px, 19vw, 187px);
+            line-height: clamp(20px, 10vw, 137px);
+            justify-self: start;
+        }
+
+        @media (max-width: 500px) {
+            font-size: clamp(40px, 17vw, 187px);
+        }
+    }
+
     &__text {
         align-self: end;
         font-family: var(--font-main);
@@ -34,7 +54,7 @@
 
 .container-inchapin {
     display: grid;
-    grid-template-columns: minmax(416px, auto) 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
 
     @media (max-width: 780px) {

@@ -13,6 +13,10 @@
         text-transform: uppercase;
         color: #111;
         cursor: pointer;
+
+        @media (max-width: 370px) {
+            display: none;
+        }
     }
 
     &__text {

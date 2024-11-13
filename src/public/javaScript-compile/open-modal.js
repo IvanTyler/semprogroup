@@ -9,6 +9,8 @@ $open_modal_form?.addEventListener('click', (e) => {
     $modal.classList.add('open')
     $modal.classList.add('open')
 
+    closeEscForm()
+
     if ($modal.classList.contains('close')) $modal.classList.remove('close')
 })
 
@@ -22,4 +24,12 @@ function closeModal() {
     if ($modal.classList.contains('open')) $modal.classList.remove('open')
 
     setTimeout(() => $modal.style.display = 'none', 500)
+}
+
+function closeEscForm() {
+    if ($modal.classList.contains('open')) {
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal()
+        })
+    }
 }

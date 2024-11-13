@@ -96,5 +96,10 @@
         width: 234px;
         height: 63px;
         cursor: pointer;
+        transition: background-color var(--transition);
+        
+        &:hover {
+            background-color: darken(#2F80ED, 7%);
+        }
     }
 }

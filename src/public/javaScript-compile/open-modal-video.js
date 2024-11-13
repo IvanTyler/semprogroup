@@ -12,19 +12,34 @@ $open_modal_video?.addEventListener('click', (e) => {
     $modal_video.classList.add('open')
     $modal_video.classList.add('open')
 
+    closeEscVideo()
     if ($modal_video.classList.contains('close')) $modal_video.classList.remove('close')
 })
 
-$close_modal_video?.addEventListener('click', () => closeModalVideo())
+$close_modal_video?.addEventListener('click', () => {
+    closeModalVideo()
+    $inchapin_video.pause()
+})
 
 function closeModalVideo() {
     $modal_video.classList.add('close')
     $modal_video.classList.add('close')
     $inchapin_video.style.display = 'none'
 
-    $inchapin_video.pause()
-
     if ($modal_video.classList.contains('open')) $modal_video.classList.remove('open')
 
     setTimeout(() => $modal_video.style.display = 'none', 500)
+}
+
+function closeEscVideo() {
+    if ($modal_video.classList.contains('open')) {
+        console.log($modal_video.classList.contains('open'));
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModalVideo()
+                $inchapin_video.pause()
+            }
+        })
+    }
 }

@@ -9,6 +9,10 @@
         background-color: var(--color-main_1);
         transition: var(--transition);
 
+        @media (max-width: 370px) {
+            background-color: var(--color-main_2);
+        }
+
         &:first-child {
             top: 0;
         }
