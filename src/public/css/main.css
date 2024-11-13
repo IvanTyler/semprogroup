@@ -465,6 +465,18 @@
     border: solid 1px #d7d7d7;
   }
 }
+@media (max-width: 370px) {
+  .header__link.tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    border: solid 1px var(--color-main_1);
+  }
+}
 .header__order-call {
   grid-area: order-call;
   font-family: var(--font-main);
