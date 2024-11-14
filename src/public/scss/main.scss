@@ -20,12 +20,11 @@ html,
 body {
     height: 100%;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
-.main {
-    height: calc(100vh - 93px);
-}
+// .main {
+//     height: calc(100vh - 93px);
+// }
 
 .wrapper {
     min-height: 100%;

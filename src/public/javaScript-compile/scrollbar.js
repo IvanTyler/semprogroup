@@ -1,3 +1,3 @@
-const mainNode = document.querySelector('.main');
+// const mainNode = document.querySelector('.wrapper');
 
-Scrollbar.init(mainNode);
+// Scrollbar.init(mainNode);
